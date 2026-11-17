@@ -1,0 +1,6 @@
+{
+  "name": "NEO — Banco Digital & NeoPay",
+  "description": "Banco digital brasileiro minimalista para jovens 14+, adultos e empresas. Conta digital, Pix, cartões oficiais Neo Visa, NeoPay, controle financeiro e Neo Shop.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

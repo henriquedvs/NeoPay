@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --neo-canvas: #F4F4F1;
+    --neo-surface: #FFFFFF;
+    --neo-neutral: #E0E0E0;
+    --neo-sage: #7D8A71;
+    --neo-sage-soft: rgba(125, 138, 113, 0.12);
+    --neo-charcoal: #3C3C3B;
+    --neo-muted: #6E6E6B;
+  }
+
+  html {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--neo-canvas);
+    color: var(--neo-charcoal);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overscroll-behavior-y: contain;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Lexend', 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+.font-display {
+  font-family: 'Lexend', 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.font-body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Minimalist Light Glassmorphism */
+.neo-glass {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 24px rgba(60, 60, 59, 0.045);
+}
+
+.neo-glass-subtle {
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(224, 224, 224, 0.78);
+}
+
+.neo-glass-dark {
+  background: rgba(60, 60, 59, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Optional Dark Theme Preference (Settings > Aparência) */
+html.neo-theme-dark {
+  --neo-canvas: #181817;
+  --neo-surface: #232321;
+  --neo-neutral: #343431;
+  --neo-charcoal: #F2F2EE;
+  --neo-muted: #A6A6A1;
+}
+
+html.neo-theme-dark body {
+  background-color: #181817;
+  color: #F2F2EE;
+}
+
+html.neo-theme-dark .neo-glass {
+  background: rgba(36, 36, 34, 0.84);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+html.neo-theme-dark .neo-glass-subtle {
+  background: rgba(42, 42, 39, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html.neo-theme-dark .bg-\[\#F4F4F1\] {
+  background-color: #181817 !important;
+}
+
+html.neo-theme-dark .bg-white,
+html.neo-theme-dark .bg-white\/90,
+html.neo-theme-dark .bg-white\/85,
+html.neo-theme-dark .bg-white\/80,
+html.neo-theme-dark .bg-white\/75 {
+  background-color: rgba(40, 40, 38, 0.92) !important;
+}
+
+html.neo-theme-dark .text-\[\#3C3C3B\] {
+  color: #F2F2EE !important;
+}
+
+html.neo-theme-dark .text-\[\#6E6E6B\] {
+  color: #A6A6A1 !important;
+}
+
+html.neo-theme-dark .border-\[\#E0E0E0\],
+html.neo-theme-dark .border-\[\#E0E0E0\]\/80,
+html.neo-theme-dark .border-\[\#E0E0E0\]\/65 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.neo-theme-dark input,
+html.neo-theme-dark select,
+html.neo-theme-dark textarea {
+  background-color: #262624 !important;
+  color: #F2F2EE !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.neo-theme-dark option {
+  background-color: #262624;
+  color: #F2F2EE;
+}
+
+html.neo-theme-dark .bg-\[\#E0E0E0\]\/55,
+html.neo-theme-dark .bg-\[\#E0E0E0\]\/50 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe area helpers for mobile app viewport */
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+.pt-safe {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+/* Hide scrollbars on horizontal native carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(60, 60, 59, 0.14);
+  border-radius: 9999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
